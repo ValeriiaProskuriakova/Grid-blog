@@ -1,0 +1,505 @@
+        
+@import "./fonts.css";
+/*-----Reset CSS------*/
+        *{
+            box-sizing:border-box;
+            margin:0;
+            padding:0;
+        }
+        body{
+            font-family:"Fira Sans Light", sans-serif;
+            font-size:calc(.5em + .5vw);
+            display:grid;
+            grid-template-rows:56.2em 184.3em 37.5em;
+            grid-template-columns:100em;
+        }
+        ul{
+            list-style-type: none;
+        }
+        input{
+            border:none;
+        }
+/*------Group styles------*/
+main .instagram, main .empty{
+    background:#3f729b;
+}
+
+main .instagram .instagram_text, main .spotify .spotify_text{
+    padding:0 3em 0 10em;
+    align-self:center;
+}
+main .presentation_text h3, main .instagram_text h3, main .play h3, main .spotify h3, main .itunes h3{
+    font: bold 1.5em Fira Sans, sans-serif;
+}
+
+main .presentation_text p, main .instagram_text p, main .spotify_text p, main .itunes_text p{
+    font: 2.25em Fira Sans Light, sans-serif;
+}
+main .play_text h3, main .play_text h4, main .play_text p, main .instagram h3, main .instagram h4, main .instagram p, main .spotify h4, main .spotify h3, main .spotify p, main .itunes h4, main .itunes h3, main .itunes p, main .presentation .presentation_text h3{
+        margin-bottom:1em;
+    }
+main .presentation_text a, main .instagram_text a, main .spotify a, main .itunes a, main .play a{
+    letter-spacing:0.1em;
+    border-radius:2em;
+    padding:1em;
+    width:11em;
+    border:0.1em solid;
+}
+main .play_text, footer{
+    background:rgb(33,34,39);
+}
+
+/*-------Header Styles-----*/
+        header{
+            display:grid;
+            grid-template-rows:repeat(auto-fill, minmax(5em, 1fr));
+            grid-template-columns:13em 5em repeat(2,1fr) 2.5em 13.7em;
+            background:no-repeat center/cover;
+        }
+        header .logo{
+            grid-column:2;
+            grid-row:2;
+            background:red;
+            background-image:url(./img/CONTAINER.png);
+        }
+        header .logo figure{
+            background:url(./img/logo.png) no-repeat center;
+            width:100%;
+            height:100%;
+        }
+        header nav{
+            grid-column:5;
+            grid-row:2;
+            align-self:center;
+            min-height:3.1em;
+            display:grid;
+            grid-template-rows:1.5em 1fr;
+            align-items:center;
+            justify-content: center;
+            
+        }
+        header nav p{
+            font-size:0.75em;
+        }
+        header nav i{
+            font-size:1.5em;
+            text-align:center;
+        }
+        .fa-lg{
+            font-size:1.8em;
+        }
+        header .text{
+            grid-column:2/span 2;
+            grid-row:5; 
+            line-height:2; 
+            display:grid;
+            grid-template-rows:repeat(7, 2.6em);          
+        }
+        header .text h1{
+            line-height: 1.3em;
+            font-size:4.5em;
+            grid-row:span 4;
+            font-weight:normal;
+        }
+        header .text p{
+            font-size:1.87em;
+        }
+        header .text p:first-of-type{
+            grid-row:6;
+        }
+        header .text p:last-of-type{
+            grid-row:7;
+        }
+        header .text span{
+            font-family:"Fira Sans", sans-serif;
+            font-weight:bold;
+        }
+/*-------Main Syles-----*/
+        main{
+       
+            grid-row:2/3;
+            display:grid;
+            grid-template-columns:repeat(4,25em);
+            grid-template-rows:31.25em repeat(2, 32.15em) 56.25em 32.5em;
+        }
+        main .image{
+            background:no-repeat center/cover;
+        }
+        main .image:first-of-type{
+            grid-column:span 2;
+            grid-row:1;
+        }
+        main .presentation{
+            grid-column:span 2;
+            grid-row:1;
+            display:grid; 
+        }
+        main .presentation .presentation_text{
+            padding:0 10em 0 3em;
+            align-self:center;
+            color:#666666;
+        }
+
+        main .image:nth-of-type(2){
+            grid-column:1;
+            grid-row:2;
+        }
+        main .image:nth-of-type(3){
+            grid-column:2;
+            grid-row:2;
+        }
+        main .image:nth-of-type(4){
+            grid-column:3;
+            grid-row:2;
+        }
+        main .image:nth-of-type(5){
+            grid-column:4;
+            grid-row:2;
+
+        }
+        main .instagram{
+            grid-column:span 2;
+            grid-row:3;
+            display:grid;
+            color:#f9f9f9;
+        }
+
+        main .play{
+            grid-column:span 4;
+            display:grid;
+            grid-template-columns:repeat(2, 25em) 50em;
+            grid-template-rows:31.2em 25em;
+        }
+        main .play_shadow{
+            grid-column:1;
+            grid-row:span 2;
+            background:rgb(40,43,47);
+        }
+        main .play_text{          
+            color:rgb(0,200,90);
+            grid-column:2;
+            grid-row:1;
+            display:grid;
+            align-content:center;
+            padding:0 7em 0 4em;
+        }
+        main .play h4{
+            font-size:1.1em;
+        }
+        main .play p{
+            font-size:0.87em;
+            margin-bottom:2em;
+            color:#f9f9f9;
+        }
+        main .play a{
+            width:11.3em;
+            font-size:0.9em;
+            letter-spacing:0;
+        }
+        main .spotify{
+            background:rgb(0,200,90);
+            color:white;
+            display:grid;
+            grid-column:span 2;
+        }
+        main .itunes{
+            background:rgb(40,43,47);
+            grid-column:3/span 2;
+            display:grid;
+        }
+        main .itunes_text{
+            align-self:center;
+            color:white;
+            margin-left:3em;
+        }
+        main .spotify_text, main .itunes_text{
+            display:grid;
+            grid-template-rows:3.75em 7em 3.75em;
+            grid-template-columns:31.25em;
+
+        }
+        main .spotify_text h3,  main .itunes_text h3{
+            grid-row:1;
+        }
+        main .spotify_text p,  main .itunes_text p{
+            grid-row:2;
+        }
+        main .spotify_text a,  main .itunes_text a{
+            grid-row:3;
+            width:14em;
+            display:grid;
+            align-items:center;
+            justify-content: center;
+        }
+
+/*--------Footer Styles-----*/
+        footer{
+            grid-row:3;
+            display:grid;
+            align-items:center;
+            justify-content: center;
+        }
+        footer .footer_wrapper{
+            display:grid;
+            grid-template-columns:17.5em 7em 16em 8em 29em;
+            grid-template-rows:repeat(auto-fill, minmax(2.5em, 1fr));
+
+        }
+        footer .dude{
+            grid-column:1;
+            grid-row:span 12;
+
+        }
+        footer .dude h5{
+            margin-bottom:1em;
+        }
+
+        footer .contact{
+            grid-column:3;
+            grid-row:span 3;
+        }
+        footer .contact p:nth-of-type(2){
+            margin:0;
+        }
+        footer .follow{
+            grid-column:3;
+            grid-row:4/span 4;        
+        }
+
+        footer .follow .social{
+            font:0.9em bold "Fira Sans";
+            display:grid;
+            grid-template-columns:1.8em 4.6em;
+            grid-template-rows:repeat(4, 1.5em);
+        }
+        footer .follow .social span{
+            font-family:Fira Sans;
+            font-weight:bold;
+            font-size:0.9em;
+        }
+        footer .follow .social i:first-of-type{
+            grid-column:1;
+            grid-row:1;
+        }
+        footer .follow .social i:nth-of-type(2){
+            grid-column:1;
+            grid-row:2;
+        }
+        footer .follow .social i:nth-of-type(3){
+            grid-column:1;
+            grid-row:3;
+        }
+        footer .follow .social i:nth-of-type(4){
+            grid-column:1;
+            grid-row:4;
+        }
+        footer .follow .social span:first-of-type{
+            grid-column:2;
+            grid-row:1;
+        }
+        footer .follow .social span:nth-of-type(2){
+            grid-column:2;
+            grid-row:2;
+        }
+        footer .follow .social span:nth-of-type(3){
+            grid-column:2;
+            grid-row:3;
+        }
+        footer .follow .social span:nth-of-type(4){
+            grid-column:2;
+            grid-row:4;
+        }
+        footer .subscribe{
+            grid-column:5;
+            grid-row:span 5;
+        }
+        footer .sponsor{
+            grid-column:5;
+            grid-row:6/span 5;
+        }
+        footer h5{
+            margin-bottom:1em;
+            color:#f9f9f9;
+            font:bold 1.1em Fira Sans, sans-serif;
+        }
+        footer p, footer .social{
+            color:#919191;
+        }
+        footer p:not(.sponsor_logo p){
+            margin-bottom:1em;
+        }
+
+        footer .subscribe [type="email"], footer .subscribe p{
+            width:100%;
+        }
+        footer .subscribe [type="email"]{
+            padding:1.1em;
+            background: #4d4e52;
+            height:3.75em;
+        }
+        footer .subscribe [type="placeholder"]{
+            color:#8d8d8d;
+            font-family:"Fira Sans Light", sans-serif;
+        }
+        footer .sponsor .sponsor_logo{
+            display:grid;
+            grid-template-columns: 5em 1.25em 5em 1.25em 5em;
+            grid-template-rows:5em;
+            color:white;
+
+        }
+        footer .sponsor .sponsor_logo figure{
+            border:1px solid white;
+            display:grid;
+            align-items:center;
+            justify-content:center;
+
+        }
+        footer .sponsor .sponsor_logo figure:first-of-type{
+            grid-column:1;
+        }
+        footer .sponsor .sponsor_logo figure:nth-of-type(2){
+            grid-column:3;
+        }
+        footer .sponsor .sponsor_logo figure:last-of-type{
+            grid-column:5;
+        }
+        footer .sponsor .sponsor_logo p{
+            font-family:"Lato", sans-serif;
+            font-size:0.8em;
+            color:white;
+        }
+
+
+ /*--------500px styles--------*/       
+
+@media all and (max-width:500px){
+    body{
+        font-size:calc(0.5em + 0.2vw);
+        grid-template-rows:56.2em 1fr 100em;
+    }
+    main{
+
+    grid-row:2/3;
+    display:grid;
+    grid-template-columns:repeat(2,50em);
+    grid-template-rows:31.25em 31.25em repeat(5, 32.15em);
+    }
+    main .play_shadow{
+        display:none;
+    }
+    main .image:first-of-type{
+        grid-column:span 2;
+        grid-row:1;
+    }
+    main .presentation{
+        grid-column:span 2;
+        grid-row:2;
+        display:grid; 
+    }
+    main .image:nth-of-type(2){
+        grid-column:1;
+        grid-row:3;
+    }
+    main .image:nth-of-type(3){
+        grid-column:2;
+        grid-row:3;
+    }
+    main .image:nth-of-type(4){
+        grid-column:1;
+        grid-row:4;
+    }
+    main .image:nth-of-type(5){
+        grid-column:2;
+        grid-row:4;
+
+    }
+    main .image:nth-of-type(6){
+        grid-column:2;
+        grid-row:5;
+
+    }
+    main .instagram{
+        grid-column:1;
+        grid-row:5;
+    }
+    main .empty{
+        display:none;
+    }
+    main .play{
+        grid-column:span 2;
+        grid-row:6;
+        grid-template-rows:32em 25em;
+    }
+    main .play_shadow{
+        display:none;
+    }
+    main .play_text{          
+        color:rgb(0,200,90);
+        grid-column:3/span 2;
+        grid-row:1;
+    }
+    main .play_text h3{
+        font-size:1.7em;
+    }
+    main .play_text p{
+        font-size:2em;
+    }
+
+    main .spotify{
+        background:rgb(0,200,90);
+        color:white;
+        display:grid;
+        grid-column:1;
+        grid-row:7;
+    }
+    main .itunes{
+        background:rgb(40,43,47);
+        grid-column:2;
+        grid-row:7;
+        display:grid;
+        }
+    footer .footer_wrapper{
+        display:grid;
+        grid-template-columns:25em 7em 16em;
+        grid-template-rows:repeat(auto-fill, minmax(2.5em, 1fr));
+
+    }
+    footer {
+        font-size:1.5em;
+    }
+    footer .dude{
+        grid-column:1;
+        grid-row:span 12;
+    }
+    footer .contact{
+        grid-column:3;
+        grid-row:span 4;
+    }
+    footer .follow{
+        grid-column:3;
+        grid-row:6/span 4;        
+    }
+    footer .subscribe{
+        grid-column:span 3;
+        grid-row:13/span 5;
+    }
+    footer .sponsor{
+        grid-column:span 3;
+        grid-row:18/span 5;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
